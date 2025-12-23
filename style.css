@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: oklch(1 0 0);
+    --color-secondary: oklch(0 0 0);
+    --color-tertiary: oklch(0.5431 0.0927 194.77);
+}
+
+.frosted {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-rows: 12rem 1fr;
+    gap: .5rem;
+    padding: .5rem;
+    background: #2A7B9B;
+    background: linear-gradient(135deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    border-radius: 16px;
+}
+
+.sidebar {
+    padding: 1rem;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    color: var(--color-primary);
+    display: grid;
+    gap: 3rem;
+    align-content: start;
+    border-radius: 16px;
+
+
+    & .title {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        align-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    & .sidebar-link {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        align-content: start;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: var(--color-primary);
+        padding: .75rem;
+        gap: .25rem;
+        border-radius: 2rem;
+    }
+
+    & .sidebar-link:focus-visible,
+    & .sidebar-link:hover {
+        outline: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    & .sidebar-link>img {
+        padding-left: .25rem;
+    }
+}
+
+
+.main {
+
+    display: grid;
+
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
