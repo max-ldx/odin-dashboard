@@ -181,7 +181,6 @@ body {
     row-gap: 2rem;
     grid-template-columns: 1fr 20rem;
     grid-template-rows: 630px auto;
-    padding: 1rem;
 
     & .cards {
         grid-column: 1;
